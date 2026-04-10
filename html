@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proposta de PABX - CN ENERGIA SA</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+ body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f6f5; /* COR LATERAL SITE*/
+  position: relative;
+}
+
+    .container {
+      max-width: 990px; /*LARGURA DO BLOCO*/
+      margin: 0 auto;
+    }
+
+    .proposal {
+      background: #ffffff; 
+      border-radius: 10px; /*Borda azul*/
+      overflow: hidden;
+      box-shadow: 0 10px 0px rgba(0, 0, 0, 0.08);
+    }
+
+    .header {
+      background: linear-gradient(135deg, #35b666, #0426eb); /*descrição titulo cn energia*/
+      color: #ffffff; /*COR DESCRIÇÃO DENTRO DO BLOCO AZUL*/
+      padding: 40px 22px; /*LARGURA BLOCO AZUL*/
+    border: 20px solid #ffffff; /* Adiciona uma borda branca de 3px ao redor */
+    border-radius: 40px; /* Adiciona cantos arredondados, se desejar */
+}
+    }
+
+    .header h1 {
+      font-size: 2.5rem; /*titulo CN ENERGIA*/
+      margin-bottom: 7px;  /*margem proposta de pabx*/
+      letter-spacing: 1px;
+    }
+
+    .header h2 { 
+      font-size: 2rem;  /*PROPOSTA PABX*/
+      font-weight: 300; /*DEIXAR EM NEGRITO*/
+      margin-bottom: 5px;
+    }
+
+    .header p {
+      max-width: 500px;
+      opacity: 0.95;
+    }
+
+    .content {
+      padding: 32px;
+      display: grid;
+      gap: 24px;
+    }
+
+    .section {
+      background: #f8fafc;
+      border: 1px solid #ebe5ea;
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .section h3 {
+      font-size: 1.2rem;
+      margin-bottom: 14px;
+      color: #1d0348;
+    }
+
+    .section p {
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      color: #1d4ed8;
+      font-weight: 700;
+    }
+
+    .units {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #0be31d;
+      border-radius: 14px;
+      padding: 18px;
+    }
+
+    .card h4 {
+      color: #1d4ed8;
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+    }
+
+    .list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .list li {
+      background: #ffffff;
+      border: 1px solid #0be31d;
+      border-radius: 12px;
+      padding: 12px 14px;
+    }
+
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffff;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .pricing-table th,
+    .pricing-table td {
+      padding: 14px;
+      border-bottom: 1px solid #e5e7eb;
+      text-align: left;
+    }
+
+    .pricing-table th {
+      background: #9accf8;
+      color: #0f172a;
+    }
+
+    .pricing-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .benefit-item {
+      background: #ffffff;
+      border: 1px solid #0be31d;
+      border-radius: 12px;
+      padding: 14px;
+      font-weight: 600;
+    }
+
+    .totals {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .total-box {
+      background: #ffffff;
+      border: 2px solid #0be31d;
+      border-radius: 16px;
+      padding: 20px;
+    }
+
+    .total-box h4 {
+      margin-bottom: 10px;
+      color: #2a0f26; 
+    }
+
+    .price {
+      font-size: 1.7rem;
+      color: #0426eb; /*COR DO PREÇO RESUMO INVESTIMENTO*/
+      font-weight: 700;
+      margin-top: 10px;
+    }
+
+    .final-total {
+      background: linear-gradient(135deg, #0e81e7, #0f172a);
+      color: #ffffff;
+      text-align: center;
+      padding: 24px;
+      border-radius: 18px;
+    }
+
+    .final-total h3 {
+      color: #ffffff;
+      margin-bottom: 8px;
+      
+    }
+
+    .final-total .price {
+      color: #ffffff;
+      font-size: rem;
+    }
+
+    .note {
+      font-size: 0.95rem;
+      color: #475569;
+      margin-top: 10px;
+    }
+
+    .cta {
+      text-align: center;
+      background: #ecfdf5;
+      border: 1px solid #bbf7d0;
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .cta p {
+      margin-bottom: 14px;
+    }
+
+    .button {
+      display: inline-block; /*WHATASAPP*/
+      text-decoration: none;
+      background: #03ed58;
+      color: #f1f3f3;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: #08642a;
+      transform: translateY(-1px);
+    }
+
+    .footer {
+      text-align: center; /*DESCRIÇÃO FINAL DO SITE*/
+      color: #636967;
+      font-size: 0.9rem;
+      padding: 24px 32px 32px;
+    }
+
+    @media (max-width: 640px) {
+      .header,
+      .content,
+      .footer {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .header h1 {
+        font-size: rem;
+      }
+
+      .header h2 {
+        font-size: 1.1rem;
+      }
+
+      .price {
+        font-size: 1.5rem;
+      }
+    }
+    .logo {
+      width: 400px;
+      margin-bottom: 1px;
+      }
+      
+      body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: url('img/logo.png') no-repeat center;
+  background-size: 400px;
+
+  opacity: 0.05; /* TRANSPARÊNCIA DO TIMBRE */
+  z-index: -1;
+}
+.logo {
+    width: 400px;  /* Mantém a largura que você já definiu */
+    margin: 0 auto;  /* Centraliza a imagem */
+    display: block;  /* Faz a imagem ser tratada como um bloco */
+}
+
+.logo {
+    max-width: 100%;  /* A logo se ajustará à largura do contêiner */
+    height: auto;     /* A altura será ajustada proporcionalmente */
+}
+
+      
+  </style>
+</head>
+
+<body>
+    
+    
+  <div class="container">
+
+    <div class="proposal">
+      <header class="header">
+        <img src="img/logo.png" alt="ViaTec Telecom" class="logo">
+        <h1>CN ENERGIA SA</h1>
+        <h2>Proposta de PABX em Nuvem ☎️</h2>
+        <p>
+          Solução moderna, econômica e escalável para comunicação empresarial,
+          com estrutura personalizada para cada unidade da empresa.
+        </p>
+      </header>
+
+      <main class="content">
+        <section class="section">
+          <h3>🏭 Estrutura Contratada</h3>
+          <p>Implantação de <span class="highlight">2 PABX</span>, distribuídos da seguinte forma:</p>
+          <div class="units">
+            <div class="card">
+              <h4>Usina Carlos Gonzato</h4>
+              <p>Cada unidade contará com seu próprio sistema de atendimento, garantindo organização, autonomia e eficiência na comunicação..</p>
+            </div>
+            <div class="card">
+              <h4>Usina Marco Baldo</h4>
+              <p>Cada unidade contará com seu próprio sistema de atendimento, garantindo organização, autonomia e eficiência na comunicação..</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h3>📦 Plano Base por Unidade</h3>
+          <ul class="list">
+            <li><strong>Pacote inicial:</strong> Até 5 ramais</li>
+            <li><strong>Valor mensal:</strong> R$ 50,00</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h3>➕ Expansão de Ramais</h3>
+          <p>Os ramais são organizados em pacotes para garantir estabilidade e crescimento da operação.</p>
+
+          <table class="pricing-table">
+            <thead>
+              <tr>
+                <th>Pacote</th>
+                <th>Valor mensal</th>
+                <th>Observação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>5 ramais</td>
+                <td>R$ 50,00</td>
+                <td>Pacote inicial</td>
+              </tr>
+              <tr>
+                <td>10 ramais</td>
+                <td>R$ 100,00</td>
+                <td>Permite expansão conforme necessidade</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p class="note">
+            <strong>Regra de contratação:</strong> até 5 ramais, aplica-se o pacote de 5. De 6 a 10 ramais, aplica-se o pacote de 10.
+          </p>
+        </section>
+
+        <section class="section">
+          <h3>📞 Plano de Ligações por Unidade</h3>
+          <ul class="list">
+            <li><strong>Plano:</strong> Móvel Plus 60 PJ</li>
+            <li><strong>Inclui:</strong> 60 minutos para chamadas móveis</li>
+            <li><strong>Demais ligações:</strong> ilimitadas</li>
+            <li><strong>Valor mensal:</strong> R$ 89,90</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h3>🧩 Adicionais Opcionais</h3>
+          <table class="pricing-table">
+            <thead>
+              <tr>
+                <th>Adicional</th>
+                <th>Valor mensal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Siga-me</td>
+                <td>R$ 10,00</td>
+              </tr>
+              <tr>
+                <td>Configuração para fora de horário</td>
+                <td>R$ 50,00 (pagamento unico)</td>
+              </tr>
+              <tr>
+                <td>Armazenamento de gravações</td>
+                <td>R$ 29,90</td>
+              </tr>
+            </tbody>
+          </table>
+<p class="note">
+            <strong>Regra de Armazenamento:</strong> As chamadas são armazenadas por até 30 dias, sendo as gravações mais antigas automaticamente substituídas conforme novas chamadas são registradas.
+          </p>
+        </section>
+
+        </section>
+
+        <section class="section">
+          <h3>⭐ Benefícios do PABX</h3>
+          <div class="benefits">
+            <div class="benefit-item">☎️ Atendimento profissional (Ura)</div>
+            <div class="benefit-item">🌎 Mobilidade total</div>
+            <div class="benefit-item">💰 Redução de custos</div>
+            <div class="benefit-item">🎧 Melhor controle de chamadas</div>
+            <div class="benefit-item">📈 Crescimento facilitado</div>
+            <div class="benefit-item">🔗 Integração com celular e computador</div>
+            
+          </div>
+        </section>
+
+        <section class="section">
+          <h3>💵 Resumo do Investimento</h3>
+          <div class="totals">
+            <div class="total-box">
+              <h4>Usina Carlos Gonzato</h4>
+              <p>Pacote base: R$ 50,00</p>
+              <p>Plano de ligações: R$ 89,90</p>
+              <div class="price">R$ 139,90/mês</div>
+            </div>
+            <div class="total-box">
+              <h4>Usina Marco Baldo</h4>
+              <p>Pacote base: R$ 50,00</p>
+              <p>Plano de ligações: R$ 89,90</p>
+              <div class="price">R$ 139,90/mês</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="final-total">
+          <h3>Total Geral</h3>
+          <p>Implantação de 2 PABX em nuvem</p>
+          <div class="price">R$ 279,80/mês</div>
+          <p class="note" style="color: rgba(255,255,255,0.9);">
+            Adicionais serão incluídos conforme necessidade de cada usina.
+          </p>
+          <p class="note" style="color: rgba(255,255,255,0.9);">
+         Este orçamento não inclui equipamentos.
+
+          </p>
+
+
+        </section>
+
+         <section class="final-total">
+          <h3>Orçamento com equipamento</h3>
+          <p>Os telefones IP modelo Intelbras TIP 125i podem ser fornecidos em 
+            regime de comodato, no valor de R$ 19,90 mensais por unidade, 
+            ou adquiridos pelo valor de R$ 259,90 por unidade.</p>
+          
+        </p>
+
+
+    
+        </section>
+
+         <section class="final-total">
+          <h3>Infraestrutura e instalação</h3>
+          <p> A implantação dos ramais pode demandar adequações de infraestrutura, como passagem 
+          de cabeamento de rede.
+         Esses serviços são avaliados conforme a necessidade do ambiente, 
+         garantindo uma solução organizada e eficiente.</p>
+          
+        </p>
+        <p> Valores não incluso neste orçamento.</p>
+          
+        </p>
+        </section>
+        
+
+        <section class="cta">
+          <p><strong>Próximo passo:</strong> entre em contato para ativação e personalização do seu PABX.</p>
+          <a class="button" href="https://wa.me/55933004831" target="_blank">📱 Falar no WhatsApp</a>
+        </section>
+      </main>
+
+      <footer class="footer">
+        Proposta comercial desenvolvida para CN ENERGIA SA.
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
