@@ -239,29 +239,40 @@
     }
 
     @media (max-width: 640px) {
-      .header,
-      .content,
-      .footer {
-        padding-left: 20px;
-        padding-right: 20px;
-      }
 
-      .header h1 {
-        font-size: rem;
-      }
+  .header {
+    padding: 20px 15px;
+  }
 
-      .header h2 {
-        font-size: 1.1rem;
-      }
+  .content {
+    padding: 20px 15px;
+  }
 
-      .price {
-        font-size: 1.5rem;
-      }
-    }
-    .logo {
-      width: 400px;
-      margin-bottom: 1px;
-      }
+  .footer {
+    padding: 20px 15px;
+  }
+
+  .header h1 {
+    font-size: 1.4rem;
+  }
+
+  .header h2 {
+    font-size: 1rem;
+  }
+
+  .header p {
+    font-size: 0.9rem;
+  }
+
+  .price {
+    font-size: 1.3rem;
+  }
+
+  .logo {
+    width: 180px;
+  }
+
+}
       
       body::before {
   content: "";
@@ -294,6 +305,12 @@
     display: block;  /* Faz a imagem ser tratada como um bloco */
 }
 
+    /* REGRAS PARA CELULAR */
+
+h1, h2, h3, p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
 
       
   </style>
